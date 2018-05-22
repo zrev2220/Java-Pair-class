@@ -1,4 +1,4 @@
-public class Triple<T extends Comparable<T>, S extends Comparable<S>, U extends Comparable<U>> implements Comparable<Triple<T, S, U>>
+public class Triple<T, S, U>
 {
 	private T _first;
 	private S _second;
@@ -14,15 +14,6 @@ public class Triple<T extends Comparable<T>, S extends Comparable<S>, U extends 
 		_first = first;
 		_second = second;
 		_third = third;
-	}
-
-	public int compareTo(Triple<T, S, U> other) {
-		if (!this.first().equals(other.first()))
-			return this.first().compareTo(other.first());
-		else if (!this.second().equals(other.second()))
-			return this.second().compareTo(other.second());
-		else
-			return this.third().compareTo(other.third());
 	}
 
 	T first() { return _first; }
